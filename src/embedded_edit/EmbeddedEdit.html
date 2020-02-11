@@ -1,0 +1,28 @@
+<form name="embedded">
+    <md-input-container class="md-block flex bm24">
+        <label>{{ ::'EMBEDDED_TYPE_LABEL'| translate }}</label>
+        <md-select ng-model="$ctrl.embed_type" ng-change="$ctrl.onChangeType()" ng-disabled="$ctrl.isDisabled()">
+            <md-option ng-repeat="t in $ctrl.embeddedTypeCollection track by $index" ng-value="t.id">
+                {{ ::t.title | translate }}
+            </md-option>
+        </md-select>
+    </md-input-container>
+    
+    <md-input-container class="md-block flex">
+        <label>{{::'EMBEDDED_URL_LABEL' | translate}}</label>
+        <input ng-model="$ctrl.embed_uri" ng-required="$ctrl.embed_uri" 
+            type="url" name="url" 
+            ng-change="$ctrl.onChangeUrl()" 
+            ng-disabled="$ctrl.isDisabled()"
+            ng-model-options="{ delay: 500 }">
+    
+        <div class="hint" ng-if="!embedded.url.$error">
+            {{::'EMBEDDED_TYPE_HINT' | translate}}
+        </div>
+    
+        <div ng-messages="embedded.url.$error" role="alert">
+            <div ng-message="url">{{ 'EMBEDDED_URL_ERROR' | translate }}</div>
+        </div>					
+    </md-input-container>	
+</form>
+											

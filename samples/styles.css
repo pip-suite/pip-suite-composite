@@ -1,0 +1,27 @@
+.pip-content-container .scrolled {
+    overflow-y: auto;
+}
+
+@media (min-width: 769px) {
+    .pip-content-container {
+        max-width: calc(100% - 300px) !important;
+    }
+}
+
+pre {
+    border-radius: 4px;
+}
+
+.flat {
+    box-shadow: none !important;
+}
+
+.pip-menu {
+    overflow-x: hidden !important;
+}
+
+.touch-div {
+    width: 400px;
+    height: 400px;
+    background-color: mediumaquamarine;
+}

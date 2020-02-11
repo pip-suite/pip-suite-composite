@@ -1,0 +1,50 @@
+<h2 class="text-title tm0 bm24">Embedded Edit {{ 'SAMPLE' |translate }}</h2>
+
+<div class="sample-output bm8">
+    <pip-embedded-edit class="bm8"
+        pip-embedded-type="embedded.embed_type"
+        pip-embedded-uri="embedded.embed_uri"
+        pip-changed="onChange">
+    </pip-embedded-edit>
+</div>
+
+<h3 class="text-subhead2">{{ 'DISABLED_CONTROL' | translate }}</h3>
+
+<div class="sample-output bm8">
+    <pip-embedded-edit class="bm8"
+        pip-embedded-type="embedded1.embed_type"
+        pip-embedded-uri="embedded1.embed_uri"
+        pip-changed="onChangeDisabled"
+        ng-disabled="onDisabled">
+    </pip-embedded-edit>
+</div>
+
+
+<div class="sample-output">
+    <pip-embedded-view class="bm8"
+            pip-embedded-type="embedded.embed_type"
+            pip-embedded-uri="embedded.embed_uri" >
+    </pip-embedded-view>
+</div>
+
+<h2 class="ttext-title tm0 bm24">{{ 'EMBEDDED_VIEW' | translate }}</h2>
+
+<h3 class="text-subhead2">{{ 'EMBEDDED_TYPE_CUSTOM' | translate }}</h3>
+
+<div class="sample-output bm8">
+    <pip-embedded-view class="bm8"
+        pip-embedded-type="embeddedViewCustom.embed_type"
+        pip-embedded-uri="embeddedViewCustom.embed_uri" >
+    </pip-embedded-view>
+</div>
+
+<h3 class="text-subhead2">{{ 'EMBEDDED_TYPE_YOUTUBE' | translate }}</h3>
+
+<div class="sample-output">
+    <pip-embedded-view class="bm8"
+        pip-embedded-type="embeddedViewYoutube.embed_type"
+        pip-embedded-uri="embeddedViewYoutube.embed_uri" >
+    </pip-embedded-view>
+</div>
+
+

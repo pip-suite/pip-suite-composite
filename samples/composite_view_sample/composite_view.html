@@ -1,0 +1,148 @@
+<h2 class="text-title tm0 bm24">Composite View {{ 'SAMPLE' | translate }}</h2>
+
+<div class="composite big-sample-output">
+    <pip-composite-view pip-contents="compositeView"
+                        ng-disabled="isDisabled()"
+                        pip-rebind="true">
+    </pip-composite-view>
+</div>
+
+<div class="h48 tm16 layout-row layout-align-start-center">
+    <md-button class="md-raised md-accent flat lm0" ng-click="onDisableClick()" aria-label="ENABLE">
+        <span ng-if="emptyCompositeViewDisabled">Enable</span>
+        <span ng-if="!emptyCompositeViewDisabled">Disable</span>
+    </md-button>
+</div>
+
+<pre class="text-body1 color-window-bg p16">
+<h3 class="text-subhead2 m0">{{:: 'CODE' | translate}}</h3>
+HTML:
+<code class="language-markup">
+&lt;<strong>pip-composite-view pip-contents="compositeView"</strong>
+            ng-disabled="isDisabled()"
+            pip-rebind="true"&gt;
+&lt;/<strong>pip-composite-view</strong>&gt;
+</code>
+JS:
+<code class="language-js">
+$scope.compositeView = [
+    {
+        type: 'text',
+        text: 'Architecture is both the process and the product of planning, designing, ' +
+        'and constructing buildings and other physical structures. Architectural works, ' +
+        'in the material form of buildings, are often perceived as cultural symbols and as works of art. ' +
+        'Historical civilizations are often identified with their surviving architectural achievements.',
+        docs: [],
+        pic_ids: [],
+        loc_pos: null,
+        loc_name: '',
+        start: null,
+        end: null,
+        checklist: []
+    },
+    {
+        type: 'text',
+        text: '### "Architecture" can mean:',
+        docs: [],
+        pic_ids: [],
+        loc_pos: null,
+        loc_name: '',
+        start: null,
+        end: null,
+        checklist: []
+    },
+    {
+        type: <strong>'documents'</strong>,
+        text: '',
+        docs: [
+            {
+                file_id: "12eb8327eaa60e89207b7489",
+                file_name: "6d4261a3e51725.mp3"
+            },
+            {
+                file_id: "54eb8327eaa60e89207b7489",
+                file_name: "1d4261a3e51725.mp3"
+            }
+        ],
+        pic_ids: [],
+        loc_pos: null,
+        loc_name: '',
+        start: null,
+        end: null,
+        checklist: []
+    },
+    {
+        type: 'pictures',
+        text: '',
+        docs: [],
+        pic_ids: [
+            "56790b4960958daa664fd8c6",
+            "56790b4c60958daa664fd8c7"
+        ],
+        loc_pos: null,
+        loc_name: '',
+        start: null,
+        end: null,
+        checklist: []
+    },
+    {
+        type: <strong>'checklist'</strong>,
+        text: '',
+        docs: [],
+        pic_ids: [],
+        loc_pos: null,
+        loc_name: '',
+        start: null,
+        end: null,
+        checklist: [
+            {
+                text: 'Efficiently simplify visionary content rather than extensive.'
+                + 'Phosfluorescently engage. Efficiently simplify visionary content rather than extensive.'
+                + 'Phosfluorescently engage.',
+                checked: true
+            },
+            {
+                text: 'Phosfluorescently engage clicks-and-mortar niche markets.',
+                checked: true
+            }
+        ]
+    },
+    {
+        type: <strong>'time'</strong>,
+        text: '',
+        docs: [],
+        pic_ids: [],
+        loc_pos: null,
+        loc_name: '',
+        start: null,
+        end: '2015-08-31T21:00:00.000Z',
+        checklist: []
+    },
+    {
+        <strong>type: 'time'</strong>,
+        text: '',
+        docs: [],
+        pic_ids: [],
+        loc_pos: null,
+        loc_name: '',
+        start: '2015-07-31T21:00:00.000Z',
+        end: '2015-08-31T21:00:00.000Z',
+        checklist: []
+    },
+    {
+        <strong>type: 'location'</strong>,
+        text: '',
+        docs: [],
+        pic_ids: [],
+        loc_pos: {
+            type: 'Point',
+            coordinates: [32.393603, -110.982593]
+        },
+        loc_name: '780 W. Lost Creek Place, Tucson, AZ 85737',
+        start: null,
+        end: null,
+        checklist: []
+    }
+];
+</code>
+</pre>

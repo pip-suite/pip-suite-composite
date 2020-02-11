@@ -1,0 +1,31 @@
+{
+    "name":  "pip-suite-composite",
+    "version":  "2.0.0",
+    "author":  "Digital Living Software Corp. <www.digitallivingsoftware.com>",
+    "description":  "Composite content controls for Pip.WebUI",
+    "contributors":  [
+                         {
+                             "name":  "Sergey Seroukhov",
+                             "email":  "seroukhov@gmail.com"
+                         },
+                         {
+                             "name":  "Anastas Fonotov",
+                             "email":  "anastasf@gmail.com"
+                         }
+                     ],
+    "keywords":  [
+                     "pip",
+                     "webui",
+                     "composite",
+                     "controls"
+                 ],
+    "noAnalyze":  true,
+    "license":  "MIT",
+    "private":  false,
+    "dependencies":  {
+
+                     },
+    "devDependencies":  {
+
+                        }
+}

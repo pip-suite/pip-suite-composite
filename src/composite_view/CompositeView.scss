@@ -1,0 +1,51 @@
+.pip-composite-view, .pip-composite-summary {
+  -webkit-user-select: auto;
+  position: relative;
+  display: block;
+
+  .pip-location-name, .pip-documents-name {
+    height: 48px !important;
+    opacity: $opacity-secondary;
+  }
+
+  .pip-documents-text, .pip-location-text  {
+    font: $font-subhead1;
+    opacity: $opacity-primary;
+    vertical-align: middle!important;
+    line-height: 48px!important;
+  }
+
+  pip-time-range {
+    p {
+      margin-top: 10px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .pip-composite-text {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font: $font-subhead1;
+    .pip-markdown p:last-of-type {
+      margin-bottom: 0px !important;
+    }
+  }
+
+  .pip-composite-time {
+    & > md-icon {
+      margin-right: 26px !important;
+    }
+  }
+}
+
+.pip-composite-summary {
+  .pip-documents-name.md-button {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+
+  .pip-location .pip-location-name{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+}

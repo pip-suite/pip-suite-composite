@@ -1,0 +1,12 @@
+@import "../node_modules/pip-webui-all/dist/pip-webui.scss";
+
+@import "content_switch/ContentSwitch";
+
+@import "checklist_edit/ChecklistEdit";
+@import "checklist_view/ChecklistView";
+
+@import "composite_edit/CompositeEdit";
+@import "composite_view/CompositeView";
+@import "composite_toolbar/CompositeToolbar";
+@import "embedded_edit/EmbeddedEdit";
+@import "embedded_view/EmbeddedView";

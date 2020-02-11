@@ -1,0 +1,30 @@
+<md-button ng-click="showPictures = !showPictures; onButtonClick('pictures')"
+           aria-label="showPictures"
+           class="md-icon-button"
+           ng-show="showIconPicture"
+           ng-disabled="transaction.busy()">
+        <md-icon class="active-camera"
+                 ng-class="{ 'active-camera': showPictures }"
+                 md-svg-icon="icons:camera"></md-icon>
+</md-button>
+<md-button ng-click="showDocuments = !showDocuments; onButtonClick('documents')"
+           aria-label="showDocuments"
+           class="md-icon-button"
+           ng-show="showIconDocument"
+           ng-disabled="transaction.busy()">
+    <md-icon ng-class="{ 'active-document': showDocuments }" md-svg-icon="icons:document"></md-icon>
+</md-button>
+<md-button ng-click="showEvent = !showEvent; onButtonClick('event')"
+           aria-label="showEvent"
+           class="md-icon-button"
+           ng-show="showIconEvent"
+           ng-disabled="transaction.busy()">
+    <md-icon ng-class="{ 'active-time': showEvent }" md-svg-icon="icons:time"></md-icon>
+</md-button>
+<md-button ng-click="showLocation = !showLocation; onButtonClick('location')"
+           aria-label="showLocation"
+           class="md-icon-button"
+           ng-show="showIconLocation"
+           ng-disabled="transaction.busy()">
+    <md-icon ng-class="{ 'active-location': showLocation }" md-svg-icon="icons:location"></md-icon>
+</md-button>

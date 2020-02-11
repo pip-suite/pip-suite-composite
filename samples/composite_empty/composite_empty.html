@@ -1,0 +1,52 @@
+<h2 class="text-title tm0 bm24">{{ 'EMPTY' | translate }} Composite Control</h2>
+<div class="bm24">
+    <md-button class="lm0 md-raised md-accent flat" ng-click="onDisableClick()" aria-label="ENABLE">
+        <span ng-if="emptyChecklistDisabled">Enable</span>
+        <span ng-if="!emptyChecklistDisabled">Disable</span>
+    </md-button>
+    <md-button class="md-raised md-accent flat" ng-click="onReset()">
+        <span>Reset</span>
+    </md-button>
+    <md-button class="md-raised md-accent flat" ng-click="onSave()">
+        <span>Save</span>
+    </md-button>    
+    <md-button class="md-raised md-accent flat" ng-click="onAbort()">
+        <span>Abort</span>
+    </md-button>    
+</div>
+<pip-composite-toolbar pip-composite-empty="emptyComposite.length == 0"
+                       ng-disabled="isDisabled()"
+                       pip-composite-id="1">
+</pip-composite-toolbar>
+
+<div class="tm24"></div>
+
+<pip-composite-edit pip-contents="emptyComposite"
+                    ng-disabled="isDisabled()"
+                    pip-scroll-container="'.composite-scroll'"
+                    pip-rebind="emptyChecklistRebind"
+                    pip-composite-placeholder="'DESCRIBE_THIS'"
+                    pip-changed="onChange()"
+                    pip-created="compositeContent = event"
+                    pip-composite-id="1">
+</pip-composite-edit>
+
+<pre class="text-body1 color-window-bg p16">
+<h3 class="text-subhead2 m0">{{:: 'CODE' | translate}}</h3>
+<code class="language-markup">&lt;<strong>pip-composite-toolbar</strong> pip-composite-empty="emptyComposite.length == 0"
+                       <strong>ng-disabled="isDisabled()"</strong>
+                       <strong>pip-composite-id="1"</strong>&gt;
+&lt;/<strong>pip-composite-toolbar</strong>&gt;
+
+&lt;div class="tm24"&gt;&lt;/div&gt;
+
+&lt;<strong>pip-composite-edit</strong> pip-contents="emptyComposite"
+                    <strong>ng-disabled="isDisabled()"</strong>
+                    pip-scroll-container="'.composite-scroll'"
+                    <strong>pip-rebind="true"</strong>
+                    pip-composite-placeholder="{{'DESCRIBE_THIS' | translate}}"
+                    pip-changed="onChange()"
+                    <strong>pip-composite-id="1"</strong>&gt;
+&lt;/<strong>pip-composite-edit</strong>&gt;
+</code>
+</pre>

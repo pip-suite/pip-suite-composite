@@ -1,0 +1,70 @@
+<h2 class="text-title tm0 bm24">Content Switch {{ 'SAMPLE' |translate }}</h2>
+
+<h3 class="text-subhead2">{{ 'PRESS_BUTTON_FOR_SHOW_HIDE' | translate }}</h3>
+<div class="sample-output bm8">
+    <pip-picture-list-edit class="bm8"
+                           ng-show="showPictures"
+                           pip-pictures="item.pictureIds"
+                           pip-created="examplePictures = $event.sender">
+    </pip-picture-list-edit>
+
+    <pip-document-list-edit ng-show="showDocuments"
+                            pip-documents="item.docs"
+                            pip-created="exampleDocs = $event.sender">
+    </pip-document-list-edit>
+
+    <pip-time-edit class="bm16"
+                   ng-show="showEvent"
+                   pip-start-date="item.start"
+                   pip-end-date="item.end"
+                   pip-start-label="{{'Start time'}}"
+                   pip-end-label="{{'End time'}}">
+    </pip-time-edit>
+
+    <pip-location-edit class="bm16 map-edit"
+                       ng-show="showLocation"
+                       pip-location-name="item.loc_name"
+                       pip-location-pos="item.loc_pos">
+    </pip-location-edit>
+</div>
+
+<div class="layout-row layout-align-start-center">
+    <div>
+        <pip-content-switch class="flex" pip-parent-element-name="'.sample-output'">
+        </pip-content-switch>
+    </div>
+</div>
+
+<pre class="text-body1 color-window-bg p16">
+<h3 class="text-subhead2 m0">{{:: 'CODE' | translate}}</h3>
+<code class="language-markup">&lt;div <strong>class="sample-output"</strong>&gt;
+    &lt;<strong>pip-picture-list-edit</strong> class="bm8"
+                           <strong>ng-show="showPictures"</strong>
+                           pip-pictures="item.pictureIds"
+                           pip-created="examplePictures = $event.sender"&gt;
+    &lt;/<strong>pip-picture-list-edit</strong>&gt;
+
+    &lt;<strong>pip-document-list-edit ng-show="showDocuments"</strong>
+                            pip-documents="item.docs"
+                            pip-created="exampleDocs = $event.sender"&gt;
+    &lt;/<strong>pip-document-list-edit</strong>&gt;
+
+    &lt;<strong>pip-time-edit</strong> class="bm16"
+                   <strong>ng-show="showEvent"</strong>
+                   pip-start-date="item.start"
+                   pip-end-date="item.end"
+                   pip-start-label="{{'Start time'}}"
+                   pip-end-label="{{'End time'}}"&gt;
+    &lt;/<strong>pip-time-edit</strong>&gt;
+
+    &lt;<strong>pip-location-edit</strong> class="bm16 map-edit"
+                       <strong>ng-show="showLocation"</strong>
+                       pip-location-name="item.loc_name"
+                       pip-location-pos="item.loc_pos"&gt;
+    &lt;/<strong>pip-location-edit</strong>&gt;
+&lt;/div&gt;
+&lt;<strong>pip-content-switch</strong> flex <strong>pip-parent-element-name="'.sample-output'"&gt;
+&lt;/pip-content-switch</strong>&gt;
+</code>
+</pre>
+

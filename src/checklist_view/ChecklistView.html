@@ -1,0 +1,17 @@
+<div ng-repeat="item in $ctrl.pipOptions track by $index">
+    <div class="pip-checklist-item layout-row layout-align-start-start">
+        <div class="pip-checklist-icon">
+            <md-checkbox  ng-model="item.checked"
+                          ng-click="$ctrl.onClick($event, item)"
+                          aria-label="COMPLETE"
+                          ng-disabled="$ctrl.ngDisabled">
+            </md-checkbox>
+        </div>
+        <div class="pip-checklist-text flex">
+            <pip-markdown pip-text="item.text"
+                          pip-rebind="true"
+                          ng-disabled="true">
+            </pip-markdown>
+        </div>
+    </div>
+</div>

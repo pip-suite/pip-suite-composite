@@ -1,0 +1,55 @@
+<h2 class="text-title tm0 bm24">Checklist {{:: 'SAMPLE' | translate }}:</h2>
+
+
+<h3 class="text-subhead2">{{ 'EMPTY' | translate }} checklist</h3>
+
+<pip-checklist-edit pip-draggable="true"
+                    ng-disabled="isDisabled()"
+                    pip-changed="onChange"
+                    pip-options="emptyChecklist"
+                    pip-rebind="emptyChecklistRebind">
+</pip-checklist-edit>
+
+<md-button class="lm0 md-raised md-accent flat" ng-click="onDisableClick()" aria-label="ENABLE">
+    <span ng-if="emptyChecklistDisabled">Enable</span>
+    <span ng-if="!emptyChecklistDisabled">Disable</span>
+</md-button>
+
+<pre class="text-body1 color-window-bg p16">
+<h3 class="text-subhead2 m0">{{:: 'CODE' | translate}}</h3>
+<code class="language-markup">&lt;<strong>pip-checklist-edit</strong> pip-draggable="true"
+                    ng-disabled="isDisabled()"
+                    pip-changed="onChange"
+                    pip-options="emptyChecklist"
+                    pip-rebind="emptyChecklistRebind"&gt;
+&lt;/<strong>pip-checklist-edit</strong>&gt;
+</code>
+</pre>
+
+<md-divider class="tm8 pip-list-divider"></md-divider>
+
+<h3 class="text-subhead2">{{ 'CHECK_LIST_VIEW' | translate }}</h3>
+
+<pip-checklist-view pip-options="viewChecklist"
+                    ng-disabled="emptyChecklistViewDisabled"
+                    pip-changed="onChangeView"
+                    pip-rebind="true">
+</pip-checklist-view>
+
+<md-button class="lm0 md-raised md-accent flat" ng-click="onDisableViewClick()" aria-label="ENABLE">
+    <span ng-if="emptyChecklistViewDisabled">Enable</span>
+    <span ng-if="!emptyChecklistViewDisabled">Disable</span>
+</md-button>
+<md-button class="lm0 md-raised md-accent flat" ng-click="onReInit()" aria-label="ENABLE">
+    Change data
+</md-button>
+<pre class="color-window-bg p16">
+<h3 class="text-subhead2 m0">{{:: 'CODE' | translate}}</h3>
+<code class="language-markup">&lt;<strong>pip-checklist-view</strong> pip-options="viewChecklist"
+                    ng-disabled="emptyChecklistViewDisabled"
+                    pip-rebind="true"&gt;
+&lt;/<strong>pip-checklist-view</strong>&gt;</code>
+</pre>
+
+
+

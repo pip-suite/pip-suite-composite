@@ -1,0 +1,31 @@
+.pip-checklist-view {
+
+  font: $font-subhead1;
+
+  .pip-checklist-item {
+    font: $font-subhead1;
+    min-height: 32px;
+    width: 100%;
+
+    .pip-checklist-icon {
+      width: 24px;
+      height: 40px;
+    }
+
+    .pip-checklist-text {
+      vertical-align: middle;
+      padding: 9px 0px 9px 24px;
+    }
+  }
+
+  md-checkbox {
+    margin-left: 2px!important;
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+    width: 20px!important;
+  }
+
+  .pip-markdown p {
+    margin: 0px!important;
+  }
+}

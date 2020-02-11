@@ -1,0 +1,93 @@
+<div ng-class="{'pip-checklist-draggable': $ctrl.selected.drag}" id="{{'checklist-'  + $ctrl.selected.id}}">
+    <div ng-repeat="item in $ctrl.checklistContent"
+         ng-mousedown="$ctrl.onClick($event, $index)"
+         class="pip-checklist-item"
+         id="{{'check-item-'  + $ctrl.selected.id + '-' +  $index}}"
+         pip-drag="$ctrl.checklistContent.length > 1 && $ctrl.selected.drag && !item.empty"
+         pip-drag="true"
+         pip-drag-data="item"
+         pip-force-touch = "true"
+         pip-touch-delay="30"
+         pip-drop="true"
+         pip-drag-stop="$ctrl.onStop(selected.id)"
+         pip-drag-start="$ctrl.onStart(selected.id)"
+         pip-scroll-container="$ctrl.pipScrollContainer"
+         pip-drop-success="$ctrl.onDropComplete($index, $data, $event, $ctrl.selected.id)">
+
+        <div ng-class="{'put_place': $ctrl.selected.drag}"></div>
+        <div class="pip-checklist-item-body layout-row layout-align-start-start"
+             pip-cancel-drag="true"
+             ng-class="{ 'select-active-item': $ctrl.isSelectedItem($index) }">
+
+            <div class="pip-checklist-button"  pip-cancel-drag="true">
+                <md-button pip-drag-handle
+                           class="pip-icon-checklist-button md-icon-button no-ripple-container"
+                           aria-label="REARRANGE"
+                           tabindex="-1"
+                           pip-mobile-mousedown="$ctrl.onDownDragg(item)"
+                           pip-mobile-mouseup="$ctrl.onDraggEnd()"
+                           ng-if="$ctrl.pipDraggable && $ctrl.checklistContent.length > 2 && !item.empty"
+                           ng-class="$ctrl.checklistContent.length > 1 ? 'cursor-move' : 'cursor-default'"
+                           ng-disabled="$ctrl.ngDisabled">
+                    <md-icon class="text-grey" md-svg-icon="icons:vhandle"></md-icon>
+                </md-button>
+            </div>
+            <div class="pip-checklist-button" style="overflow: hidden"  pip-cancel-drag="true">
+                <div class="pip-checklist-button-container">
+                    <md-button class="pip-icon-checklist-button md-icon-button"
+                               ng-show="item.empty"
+                               ng-disabled="$ctrl.ngDisabled"
+                               md-ink-ripple
+                               ng-click="$ctrl.onAddItem()"
+                               tabindex="-1"
+                               aria-label="PLUS">
+                        <md-icon class="text-grey" md-svg-icon="icons:plus"></md-icon>
+                    </md-button>
+                    <md-checkbox ng-model="item.checked"
+                                 ng-show="!item.empty"
+                                 aria-label="COMPLETE"
+                                 pip-cancel-drag="true"
+                                 ng-focus="$ctrl.onItemFocus($index)"
+                                 ng-change="$ctrl.onChecked(item)"
+                                 ng-disabled="$ctrl.ngDisabled">
+                    </md-checkbox>
+                </div>
+            </div>
+            <div class="pip-checklist-text flex " pip-cancel-drag="true">
+                <md-input-container md-no-float class="flex" >
+                    <textarea ng-model="item.text"
+                              name="{{'text' + $index}}"
+                              aria-label="TEXT"
+                              class="pip-text-checkbox"
+                              ng-focus="$ctrl.onItemFocus($index)"
+                              ng-change="$ctrl.onChangeItem($index)"
+                              ng-keydown="$ctrl.onTextareaKeyDown($event, $index, item)"
+                              placeholder="{{::'TEXT' | translate}}"
+                              id="{{'check-item-text-' + selected.id + '-' + $index}}"
+                              ng-disabled="$ctrl.ngDisabled">
+                    </textarea>
+                </md-input-container>
+            </div>
+            <div class="pip-checklist-button"  pip-cancel-drag="true">
+                <md-button class="pip-icon-checklist-button md-icon-button" md-ink-ripple
+                           ng-click="$ctrl.onDeleteItem($index, item)"
+                           ng-disabled="$ctrl.ngDisabled"
+                           tabindex="-1"
+                           ng-focus="$ctrl.onItemFocus($index)"
+                           ng-show="$ctrl.isSelectedItem($index)"
+                           aria-label="DELETE-ITEM">
+                    <md-icon class="text-grey" md-svg-icon="icons:cross-circle"></md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="{{'check-item-empty-' + $ctrl.selected.id}}"
+         class="pip-empty-text"
+         pip-drag="false"
+         pip-drop="true"
+         pip-drop-success="$ctrl.onDropComplete($ctrl.checklistContent.length, $data, $event, $ctrl.selected.id)">
+        <div ng-class="{'put_place': $ctrl.selected.drag}"></div>
+    </div>
+</div>
